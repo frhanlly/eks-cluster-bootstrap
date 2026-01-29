@@ -18,17 +18,32 @@ variable "region" {
   type        = string
   description = "region to create aws resources"
   default     = "sa-east-1"
-} 
+}
 
 
-#bucket for backend
-variable "bucket_region" {
+
+variable "policy_cni" {
   type        = string
-  description = "bucket region to store tfstate"
-  default     = "sa-east-1"
-} 
+  description = "EKS CNI policy"
+}
 
-variable "bucket_name" {
+variable "ecr_policy" {
   type        = string
-  description = "bucket name to store tfstate"
-} 
+  description = "EKS ECR policy"
+}
+
+variable "node_policy" {
+  type        = string
+  description = "EKS Node policy"
+}
+
+
+variable "disk_size" {
+  type        = string
+  description = "disk size for EC2 workers"
+}
+
+variable "ec2_instance_type" {
+  type        = string
+  description = "instance type for EC2 workers"
+}
