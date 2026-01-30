@@ -51,3 +51,8 @@ variable "ec2_instance_type" {
   type        = string
   description = "instance type for EC2 workers"
 }
+
+variable "size_mng" {
+  type = number
+  description = "number of worker nodes"
+}

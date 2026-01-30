@@ -36,6 +36,7 @@ module "mng" {
   cluster_name      = module.eks.cluster_name
   disk_size         = var.disk_size
   ec2_instance_type = var.ec2_instance_type
+  size_mng = var.size_mng
 }
 
 
