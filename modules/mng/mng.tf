@@ -8,9 +8,9 @@ resource "aws_eks_node_group" "first_mng" {
   instance_types = [""]
 
   scaling_config {
-    desired_size = 1
-    max_size     = 2
-    min_size     = 1
+    desired_size = var.size_mng
+    max_size     = var.size_mng
+    min_size     = var.size_mng
   }
 
   update_config {
